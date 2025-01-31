@@ -15,7 +15,7 @@
         <link rel="manifest" href="https://gyanaangan.in/static/favicons/site.0da4bede9a37.webmanifest">
         <link rel="shortcut icon" href="https://gyanaangan.in/static/favicons/favicon.8191706e7942.ico">
         <meta name="apple-mobile-web-app-title" content="Gyan Aangan">
-        <meta name="application-name" content="Gyan Aangan"> -->
+        <meta name="application-name" content=" Aangan"> -->
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <script src="NAS/f.txt"></script><script async="" src="NAS/f(1).txt" crossorigin="anonymous" data-checked-head="true"></script>
@@ -32,6 +32,38 @@
     <meta property="og:image" content="">
 
         <style>
+            .view-pdf-btn {
+        background-color: #2D3748; /* Dark gray */
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .view-pdf-btn:hover {
+        background-color: #4FD1C5; /* Blue-green hover */
+        color: black;
+        transform: scale(1.05);
+    }
+
+    /* Eye Icon */
+    .view-pdf-btn svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+    }
+
+    .view-pdf-btn:hover svg {
+        fill: black;
+    }
         .printable {
             display: none;
         }
@@ -103,7 +135,7 @@
     <div class="container flex flex-wrap justify-between items-center mx-auto">
         <div class="flex justify-between items-center flex-grow md:pr-8">
             <a href="index.html" title="Ei Hub" name="Ei Hub | Home" class="flex items-center">
-                <img src="EI_HUB_image_converted.png" class="mr-2 h-12" alt="Gyan Aangan Logo">
+                <img src="EI_HUB_image_converted.png" class="mr-2 h-12" alt="Ei Hub Logo">
                 <span class="self-center font-mono text-xl font-semibold whitespace-nowrap text-white">Ei Hub</span>
             </a>
             
@@ -258,7 +290,7 @@
     <h1 class="font-semibold text-white hover:text-blue-400">
         
        
-        <a href="">NAS-PDF(notes)</a>
+        <a href="https://drive.google.com/file/d/1DeimT6kobdnvXuBT7_ZN3qlVhlx0Vhfq/view">NAS-PDF(notes)</a>
     </h1>
 </div>
 </div>
@@ -267,11 +299,18 @@
     <time class="rounded-full">this year</time>·
     <p>2024-25</p>
 </div>
+<button class="view-pdf-btn" onclick="openPDF('1DeimT6kobdnvXuBT7_ZN3qlVhlx0Vhfq')">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <path d="M16 8s-3-6-8-6-8 6-8 6 3 6 8 6 8-6 8-6Zm-8 5c-3.5 0-6-3.58-6-5s2.5-5 6-5 6 3.58 6 5-2.5 5-6 5Zm0-8.5A3.5 3.5 0 1 0 11.5 8 3.5 3.5 0 0 0 8 4.5Zm0 6A2.5 2.5 0 1 1 10.5 8 2.5 2.5 0 0 1 8 10.5Z"></path>
+    </svg>
+    View PDF
+</button>
+
 <div class="flex items-center gap-6">
     
     <div class="flex justify-center items-center w-6">
         
-            <a target="_blank" href="">
+            <a target="_blank" href="https://drive.google.com/file/d/1DeimT6kobdnvXuBT7_ZN3qlVhlx0Vhfq/view">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:fill-yellow-100" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"></path>
                     <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"></path>
@@ -330,17 +369,8 @@
             </a>
         
     </div>
-    <button onclick="viewPdf(this)" data-pdf="Unit 1/Rectifier Clipper Clamper" class="rounded-full bg-yellow-600 p-2 px-3">View Pdf</button>
-    <div class="relative"> <iframe id="Unit 1/Rectifier Clipper Clamper" style="display: none;" class="w-full max-w-5xl mx-auto h-[90vh] relative z-10" src="https://github.com/00Ansh00/EI-HUB-/blob/438a2d908c769c1a992aa86ad6c3257c0b824e18/nas%20quantum.pdf"></iframe>
-        <div class="w-full max-w-5xl h-[70vh] mx-auto my-3 absolute top-0 left-0 -z-10" style="display: none;">
-            <svg class="animate-spin w-24 mx-auto text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-60" cx="12" cy="12" r="20" stroke-width="1"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                </path>
-            </svg>
-        </div>
-    </div>
     
+     
         
     
 </div>
@@ -369,9 +399,7 @@
             </div>
             <h1 class="font-semibold text-white hover:text-blue-400">
                 
-               <!--   <a href="https://gyanaangan.in/b-tech/cs/2nd-yr/web-designing/practicals-web-designing">
-                        Practicals Web Designing - LAB MANUAL
-                    </a>-->
+                
                 <a href="">NAS-PYQ(2023-24)</a>
             </h1>
         </div>
@@ -750,7 +778,7 @@
                 <span class="sr-only">Close modal</span>
             </button>
             <div class="p-6 text-center">
-                <div title="Gyan Aangan" name="Gyan Aangan" class="flex-col flex items-center mb-4 justify-center">
+                <div title="Ei Hub" name="Ei Hub" class="flex-col flex items-center mb-4 justify-center">
                     <img src="EI_HUB_image_converted.png" class="mr-2 h-12" alt="Ei Hub Logo">
                     <span class="self-center font-mono text-3xl font-bold whitespace-nowrap text-white">Ei Hub</span>
                 </div>
@@ -789,7 +817,14 @@
         
 
         
-        <script>
+  <script>
+         function openPDF(fileID)
+          {
+           let pdfURL = "https://drive.google.com/file/d/" + fileID + "/preview";
+           window.open(pdfURL, "_blank"); // Opens in a new tab
+          }
+  </script>
+ <script>
     document.addEventListener('DOMContentLoaded', function () {
         const scrollContainer = document.querySelector('.custom-scroll');
 
@@ -886,9 +921,5 @@ function copyToClipboard(text) {
         
     
 
-<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="ads.html" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins><iframe src="./Web Designing - Gyan Aangan_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="zrt_lookup_fy2021.html" style="display: none;"></iframe></html>
-</footer>
-<script src="script1.js.download"></script>
-
-
-<iframe src="aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="zrt_lookup_fy2021.html" style="display: none;"></iframe></html>
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="ads.html" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins><iframe src="aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="zrt_lookup_fy2021.html" style="display: none;"></iframe></html>
+ 
