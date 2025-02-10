@@ -42,25 +42,31 @@
 
     <!-- Firebase Authentication Script -->
     <script type="module">
+        // 🔹 Import Firebase SDK
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-
-        // 🔹 Corrected Firebase Config
+    
+        // 🔹 Firebase Configuration (Replace with Your Firebase Config)
         const firebaseConfig = {
             apiKey: "AIzaSyA32lYznnwaNPPG_xR_N4b4AB7LOxIPEUg",
             authDomain: "ei-hub-6612b.firebaseapp.com",
             projectId: "ei-hub-6612b",
-            storageBucket: "ei-hub-6612b.appspot.com",  // ✅ Fixed this
+            storageBucket: "ei-hub-6612b.firebasestorage.app",
             messagingSenderId: "852517243357",
             appId: "1:852517243357:web:bf0c89e2f00e35cde7ce34",
             measurementId: "G-XH0XS7KRG5"
         };
-
+    
         // 🔹 Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const provider = new GoogleAuthProvider();
-
+    
+        // 🔹 Fix Popup Block Issue
+        provider.setCustomParameters({
+            prompt: "select_account"
+        });
+    
         // 🔹 Google Login Function
         document.getElementById("googleLogin").addEventListener("click", () => {
             signInWithPopup(auth, provider)
@@ -69,12 +75,14 @@
                     document.getElementById("userInfo").innerHTML = "Welcome, " + user.displayName;
                     document.getElementById("userPic").src = user.photoURL;
                     document.getElementById("userPic").style.display = "block"; // Show user picture
+                    console.log("Login Successful:", user);
                 })
                 .catch((error) => {
-                    console.error("Login Failed:", error);
+                    console.error("Login Failed:", error.message);
+                    alert("Login failed: " + error.message); // Show error message
                 });
         });
     </script>
-
+    
 </body>
 </html>
