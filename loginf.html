@@ -1,33 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EI RESOURCE HUB | Explore Courses & Resources</title>
-<meta name="description" content="Explore a variety of courses and resources to enhance your knowledge at EI Resource Hub.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EI RESOURCE HUB | Login</title>
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="EI RESOURCE HUB | Explore Courses & Resources">
-<meta property="og:description" content="Discover a variety of educational courses and resources to expand your knowledge.">
-<meta property="og:image" content="https://i.postimg.cc/15HJKJ8c/DALL-E-2025-02-01-20-55-21-A-modern-and-professional-banner-for-EI-HUB-an-educational-resource.webp">
-<meta property="og:site_name" content="EI RESOURCE HUB">
-
-<!-- Favicon and App Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="shortcut icon" href="favicon.ico">
-
-<!-- Theme Colors -->
-<meta name="apple-mobile-web-app-title" content="EI Resource Hub">
-<meta name="application-name" content="EI Resource Hub">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
     <style>
         /* Style for the login button */
         #googleLogin {
@@ -50,6 +27,10 @@
             margin-top: 10px;
         }
     </style>
+</head>
+
+<body>
+
     <h2>Login Page</h2>
 
     <!-- Google Login Button -->
@@ -59,19 +40,20 @@
     <p id="userInfo"></p>
     <img id="userPic" style="display: none; width: 50px; border-radius: 50%;">
 
+    <!-- Firebase Authentication Script -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-        // 🔹 Replace with your Firebase Config
+        // 🔹 Corrected Firebase Config
         const firebaseConfig = {
             apiKey: "AIzaSyA32lYznnwaNPPG_xR_N4b4AB7LOxIPEUg",
-  authDomain: "ei-hub-6612b.firebaseapp.com",
-  projectId: "ei-hub-6612b",
-  storageBucket: "ei-hub-6612b.firebasestorage.app",
-  messagingSenderId: "852517243357",
-  appId: "1:852517243357:web:bf0c89e2f00e35cde7ce34",
-  measurementId: "G-XH0XS7KRG5"
+            authDomain: "ei-hub-6612b.firebaseapp.com",
+            projectId: "ei-hub-6612b",
+            storageBucket: "ei-hub-6612b.appspot.com",  // ✅ Fixed this
+            messagingSenderId: "852517243357",
+            appId: "1:852517243357:web:bf0c89e2f00e35cde7ce34",
+            measurementId: "G-XH0XS7KRG5"
         };
 
         // 🔹 Initialize Firebase
@@ -93,5 +75,6 @@
                 });
         });
     </script>
+
 </body>
 </html>
