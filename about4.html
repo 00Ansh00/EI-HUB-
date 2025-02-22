@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits - EI HUB</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ffcc;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.8em;
+            text-shadow: 0 0 20px #00ffcc;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .credits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+        }
+        .credits-box {
+            border: 3px solid #00ffcc;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #00ffcc;
+            width: 300px;
+            background-color: #111;
+            transition: transform 0.3s ease-in-out;
+        }
+        .credits-box:hover {
+            transform: scale(1.05);
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff4500;
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px #ff4500;
+        }
+        .name {
+            font-size: 1.8em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #ff4500;
+        }
+        .role {
+            font-size: 1.3em;
+            color: #ffdd57;
+            font-weight: 600;
+        }
+        .insta {
+            margin-top: 10px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        .glitch {
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px #ff0000; }
+            50% { text-shadow: -2px -2px #00ffcc; }
+            100% { text-shadow: 2px 2px #ff0000; }
+        }
+        a {
+            color: #ff4500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glitch">// Meet the Minds Behind EI-HUB</h1>
+    <div class="credits-container">
+        <div class="credits-box">
+            <div class="profile">
+                <img src="" alt="Ansh Dubey">
+                <p class="name">Ansh Dubey</p>
+                <p class="role">Founder & Lead Developer</p>
+                <p class="linkedin"><a href="" target="_blank">@contact</a></p>
+            </div>
+        </div>
+        <div class="credits-box">
+            <div class="profile">
+                <img src="friend1-photo.jpg" alt="Priyanshu Dubey">
+                <p class="name"><a href="friend1-profile-link">Priyanshu Dubey</a></p>
+                <p class="role"> Backend & Security</p>
+                <p class="linkedin"><a href="" target="_blank">@contact</a></p>
+            </div>
+        </div>
+        <div class="credits-box">
+            <div class="profile">
+                <img src="WhatsApp Image 2025-02-22 at 13.37.02_11aee12e.jpg" alt="Ansh Pal">
+                <p class="name"><a href="https://www.linkedin.com/in/ansh-pal-45391b328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Ansh Pal</a></p>
+                <p class="role">UI/UX & Ideas</p>
+                <p class="insta"><a href="https://www.instagram.com/ans_hpal?igsh=enpoOTM5eWtjdW5m" target="_blank">@ANSH_insta</a></p>
+            </div>
+        </div>
+        <div class="credits-box">
+            <div class="profile">
+                <img src="WhatsApp Image 2025-02-22 at 13.37.12_84f30676.jpg" alt="Harshit Sharma">
+                <p class="name"><a href="https://www.linkedin.com/in/harshit-sharma-b6b6b4292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Harshit Sharma</a></p>
+                <p class="role">Contributor & Support</p>
+                <p class="insta"><a href="https://www.instagram.com/ooye.harshit?utm_source=qr&igsh=MWRqaXAxejlkYzA4dQ==" target="_blank">@harshit_insta</a></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <a href="index.html">⬅ Back to Home</a>
+</body>
+</html>
