@@ -1,5 +1,47 @@
+<><script src="https://unpkg.com/lunr/lunr.js"></script><script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Load search index file (search-index.json)
+    fetch('search-index.json')
+      .then(response => response.json())
+      .then(data => {
+        // Initialize Lunr.js search engine
+        const idx = lunr(function () {
+          this.ref('id'); // Each item is identified by 'id'
+          this.field('title'); // Title is searchable
+          this.field('content'); // Content is also searchable
+          data.forEach(doc => this.add(doc)); // Add data to search index
+        });
 
-// Copyright 2012 Google Inc. All rights reserved.
+        // Get search box and results area
+        const searchBox = document.getElementById('search-box');
+        const searchResults = document.getElementById('search-results');
+
+        // Listen for user input
+        searchBox.addEventListener('input', function () {
+          const query = this.value.trim(); // Get user input
+          searchResults.innerHTML = ''; // Clear old results
+
+          if (query.length > 0) { // Only search if query is not empty
+            const results = idx.search(query); // Search using Lunr.js
+
+            if (results.length > 0) { // If there are results
+              results.forEach(result => {
+                const item = data.find(d => d.id == result.ref); // Get matching item
+                const div = document.createElement('div'); // Create a div
+                div.innerHTML = `<a href="${item.url}">${item.title}</a>`; // Add clickable link
+                searchResults.appendChild(div); // Show result
+              });
+            } else {
+              searchResults.innerHTML = '<p>No results found</p>'; // If no results
+            }
+          }
+        });
+      })
+      .catch(error => console.error('Error loading search index:', error))}// Error handling
+  ; // Error handling
+  });
+</script></>
+
  
 (function(){
 

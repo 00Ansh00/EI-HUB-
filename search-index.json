@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Home",
+        "content": "Welcome to EI HUB. Explore a variety of courses and resources.",
+        "url": "index.html"
+    },
+    {
+        "id": 2,
+        "title": "Courses",
+        "content": "Discover our course offerings including B.Tech and B.Sc programs.",
+        "url": "courses.html"
+    },
+    {
+        "id": 3,
+        "title": "About Us",
+        "content": "Learn more about EI HUB and our mission to provide quality education.",
+        "url": "about.html"
+    }
+]
