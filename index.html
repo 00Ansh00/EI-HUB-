@@ -104,15 +104,7 @@
 <script src="search.js"></script>
 
             
-<script async="" src="search.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  
-  gtag('config', 'G-P37HBDS10M');
-</script>
+ 
 
         
         
@@ -1049,7 +1041,57 @@
           
                   
                   
-                  <script>
+          <script src="https://unpkg.com/lunr/lunr.js"></script>
+          <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              fetch('search-index.json') // Load search index
+              .then(response => response.json())
+              .then(data => {
+                  // Initialize Lunr.js search engine
+                  const idx = lunr(function () {
+                      this.ref('id');
+                      this.field('title');
+                      this.field('content');
+                      data.forEach(doc => this.add(doc));
+                  });
+          
+                  // Get search input & results container
+                  const searchBox = document.getElementById('search-box');
+                  const searchButton = document.getElementById('search-button');
+                  const searchResults = document.getElementById('search-results');
+          
+                  // Function to perform search
+                  function performSearch() {
+                      const query = searchBox.value.trim();
+                      searchResults.innerHTML = '';
+          
+                      if (query.length > 0) {
+                          const results = idx.search(query);
+                          if (results.length > 0) {
+                              results.forEach(result => {
+                                  const item = data.find(d => d.id == result.ref);
+                                  const div = document.createElement('div');
+                                  div.className = "p-2 bg-gray-100 dark:bg-gray-700 rounded-lg my-1";
+                                  div.innerHTML = `<a href="${item.url}" class="text-blue-500 dark:text-blue-300">${item.title}</a>`;
+                                  searchResults.appendChild(div);
+                              });
+                          } else {
+                              searchResults.innerHTML = '<p class="text-red-500">No results found</p>';
+                          }
+                      }
+                  }
+          
+                  // Run search on input change
+                  searchBox.addEventListener('input', performSearch);
+          
+                  // Also allow search on button click
+                  searchButton.addEventListener('click', performSearch);
+              })
+              .catch(error => console.error('Error loading search index:', error));
+          });
+          </script>
+          
+                 <script>
           // Select all buttons with the class 'shareButton'
           const shareButtons = document.querySelectorAll('.shareButton');
           
